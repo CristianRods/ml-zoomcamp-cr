@@ -1,18 +1,22 @@
 {
   "name": "ML Course Dev",
-  "dockerComposeFile": "../docker-compose.yml",
+  "dockerComposeFile": "docker-compose.yml",
   "service": "notebook",
-  "workspaceFolder": "/app",
+  "workspaceFolder": "/app/notebooks",
   "remoteUser": "root",
-  "settings": {
-    "python.pythonPath": "/usr/local/bin/python"
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python"
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter"
+      ]
+    }
   },
-  "extensions": [
-    "ms-python.python",
-    "ms-toolsai.jupyter"
-  ],
   "mounts": [
-    "source=${localWorkspaceFolder}/notebooks,target=/app/notebooks,type=bind"
+    "source=${localWorkspaceFolder}/notebooks"
   ],
-  "postCreateCommand": "pip install -r requirements.txt"
+  "postCreateCommand": "pip install -r /app/requirements.txt"
 }

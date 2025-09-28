@@ -70,6 +70,7 @@ ml-course/
 # Use docker-compose to setup an entire dev ecosystem with multiple applications like Postgres, MLflow.
 
 
+
 # Image and container setup
 IMAGE_NAME = ml-course
 CONTAINER_NAME = ml-course-container
@@ -212,7 +213,12 @@ torch
 - This setup assumes Docker and WSL2 are already installed.
 - All code runs inside the container; your local environment stays clean.
 - You can mount datasets or notebooks via the `/app` volume.
+- Make sure you have installed docker-compose in WSL
 
+```  
+sudo apt update && sudo apt install docker-compose
+
+´´´
 ---
 
 Happy modeling! 🧬
