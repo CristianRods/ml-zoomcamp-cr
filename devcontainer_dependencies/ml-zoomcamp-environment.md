@@ -1,3 +1,9 @@
+# 📘 `README.md` to make all this explainable
+---
+
+## SETUP YOUR ENVIROMENT
+
+#### HOW TO MOUNT A CONTAINER IN DOCKER TO RUN ALL YOUR ML APPLICATIONS
 
 ## 🛠️ `Makefile` (Aligned with Your Dockerfile)
 
@@ -32,10 +38,6 @@ EXPOSE 8888
 CMD ["bash"]
 ```
 
----
-
-## 📘 `README.md` to make all this explainable
-
 ```markdown
 # 🧠 ML Course Environment (Docker + WSL)
 
@@ -63,125 +65,44 @@ ml-course/
 ├── mlruns	            # save all runs from machine learning
 └── README.md           # project overview
 ```
+```
+´´´ 
 
 ## 🐳 Docker Setup
-# Use docker in two ways:
-# Using a single docker to make all the quick exercises.
-# Use docker-compose to setup an entire dev ecosystem with multiple applications like Postgres, MLflow.
+### Use docker in two ways: 
+	Use a single docker to make all the quick exercises.
+	Use docker-compose to setup an entire dev ecosystem with multiple applications like Postgres, MLflow.
 
 
 
-# Image and container setup
-IMAGE_NAME = ml-course
-CONTAINER_NAME = ml-course-container
+# Image and container setup - VARIABLES
+### EXAMPLES
+
+PROVIDE THE VARIABLES: 
+
+
+IMAGE_NAME = <image_name>
+CONTAINER_NAME = <name-container>
 DEBUG_CONTAINER = $(CONTAINER_NAME)-debug-$(shell date +%s)
 PORT = 8888
 ENV_FILE = .env
 NOTEBOOK_DIR = $(PWD)/notebooks
 
-## ─────────────────────────────────────────────
-## 🐳 Docker (manual control)
-## ─────────────────────────────────────────────
+ENSURE YOU HAVE A .env file and follow the structure of the folder system.
 
-build:
-	@if [ -z "$$(docker images -q $(IMAGE_NAME))" ]; then \
-		echo "🔨 Building image..."; \
-		docker build -t $(IMAGE_NAME) .; \
-	else \
-		echo "✅ Image $(IMAGE_NAME) already exists."; \
-	fi
+### CHECK the MAKE FILE
 
-run-env:
-	docker run -it --rm \
-		--env-file $(ENV_FILE) \
-		-v $(PWD):/app \
-		$(IMAGE_NAME)
+../Makefile 
 
-run-named:
-	docker run -it --rm \
-		--name $(CONTAINER_NAME) \
-		-v $(PWD):/app \
-		$(IMAGE_NAME)
+### You will see three sections: 
+	Docker (manual control): Quick Dev without compose the entire solution
+	Docker Compose (stack orchestration): Build and orchestate several applications to integrate a solution
+	Maintenance: Maintain your progress clear and update your repo
 
-shell:
-	docker run -it --rm \
-		--name $(DEBUG_CONTAINER) \
-		-v $(PWD):/app \
-		$(IMAGE_NAME) \
-		bash
-
-notebook:
-	docker run -it --rm \
-		--name $(CONTAINER_NAME) \
-		-p $(PORT):8888 \
-		-v $(NOTEBOOK_DIR):/app/notebooks \
-		$(IMAGE_NAME) \
-		jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root --NotebookApp.token=''
-
-## ─────────────────────────────────────────────
-## 🧩 Docker Compose (stack orchestration)
-## ─────────────────────────────────────────────
-
-compose-up:
-	docker-compose up --build
-
-compose-down:
-	docker-compose down
-
-compose-logs:
-	docker-compose logs -f notebook
-
-compose-restart:
-	docker-compose restart
-
-compose-shell:
-	docker-compose exec notebook bash
-
-## ─────────────────────────────────────────────
-## 🧹 Maintenance
-## ─────────────────────────────────────────────
-
-push:
-	git add .
-	git commit -m "Update ML course setup"
-	git push
-
-clean:
-	docker rmi $(IMAGE_NAME) || true
-
-clean-all:
-	docker container prune -f
-	docker volume prune -f
-	docker rmi $(IMAGE_NAME) || true
 
 ## 📦 Python Dependencies
 
 List your packages in `requirements.txt`. Example:
-
-```
-
-## DevContainer file
-#### create a json file with the next configuration and make sure you have __ms-vscode-remote.remote-containers__ extension installed in VS Code.
-
-``` 
-{
-  "name": "ML Course Dev",
-  "dockerComposeFile": "../docker-compose.yml",
-  "service": "notebook",
-  "workspaceFolder": "/app",
-  "remoteUser": "root",
-  "settings": {
-    "python.pythonPath": "/usr/local/bin/python"
-  },
-  "extensions": [
-    "ms-python.python",
-    "ms-toolsai.jupyter"
-  ],
-  "mounts": [
-    "source=${localWorkspaceFolder}/notebooks,target=/app/notebooks,type=bind"
-  ],
-  "postCreateCommand": "pip install -r requirements.txt"
-}
 
 ```
 
@@ -207,6 +128,33 @@ lightgbm
 torch
 
 ```
+
+
+
+## DevContainer file
+#### create a json file with the next configuration and make sure you have __ms-vscode-remote.remote-containers__ extension installed in VS Code.
+
+``` 
+{
+  "name": "ML Course Dev",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "notebook",
+  "workspaceFolder": "/app",
+  "remoteUser": "root",
+  "settings": {
+    "python.pythonPath": "/usr/local/bin/python"
+  },
+  "extensions": [
+    "ms-python.python",
+    "ms-toolsai.jupyter"
+  ],
+  "mounts": [
+    "source=${localWorkspaceFolder}/notebooks,target=/app/notebooks,type=bind"
+  ],
+  "postCreateCommand": "pip install -r requirements.txt"
+}
+
+
 
 ## 🧪 Notes
 
