@@ -73,8 +73,6 @@ ml-course/
 	Use a single docker to make all the quick exercises.
 	Use docker-compose to setup an entire dev ecosystem with multiple applications like Postgres, MLflow.
 
-
-
 # Image and container setup - VARIABLES
 ### EXAMPLES
 
@@ -128,8 +126,6 @@ lightgbm
 torch
 
 ```
-
-
 
 ## DevContainer file
 #### create a json file with the next configuration and make sure you have __ms-vscode-remote.remote-containers__ extension installed in VS Code.

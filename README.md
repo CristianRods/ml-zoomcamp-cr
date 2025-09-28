@@ -1,65 +1,114 @@
-# ML Zoomcamp
+SIGN UP TO THE COURSE HERE: https://airtable.com/shryxwLd0COOEaqXo
+GIVE A START TO THESE REPOS: https://github.com/DataTalksClub   
 
-## 1.intro
-https://github.com/DataTalksClub/machine-learning-zoomcamp/blob/master/01-intro/README.md
+ALL CONTENTS IN THIS REPO COVERS 2025 Cohort. 
 
- Summary of First Session - Machine Learning Zoomcamp
- 
- 🚗 Introduction to Machine Learning with Cars Data
-We start with data about cars, including characteristics (features) and prices (target). 
-A Machine Learning (ML) model can be used to extract patterns from known information (data) about some cars in order to predict car prices based on their characteristics.
+## Syllabus
+Module 1: Introduction to Machine Learning
+Learn the fundamentals: what ML is, when to use it, and how to approach ML problems using the CRISP-DM framework.
 
-🧠 Rules-Based Systems vs. Machine Learning
+## Topics:
 
-Rules-Based Systems: It is necessary to manually convert rules into code using a programming language and apply them to data. Extracting patterns manually can become complex and challenging.
-Machine Learning: Instead of manually coding rules, ML models automatically extract patterns from data using Mathematics and Statistics.
+ML vs rule-based systems
+Supervised learning basics
+CRISP-DM methodology
+Model selection concepts
+Environment setup
 
-🔍 Supervised Machine Learning
-In supervised learning, models learn from labeled data (with known outcomes) to make predictions on unseen data.
+## Module 2: Machine Learning for Regression
+Build a car price prediction model while learning linear regression, feature engineering, and regularization.
+Topics:
 
-🛠️ CRISP-DM (Cross Industry Standard Process for Data Mining)
-A structured methodology for organizing ML projects, consisting of the following steps:
+Linear regression (from scratch and with scikit-learn)
+Exploratory data analysis
+Feature engineering
+Regularization techniques
+Model validation
 
- 💼 Business Understanding
- 
- 🔎 Data Understanding
- 
- 🧹 Data Preparation
- 
- 🤖 Modeling (choosing and training models, then selecting the best one)
- 
- 📊 Evaluation
- 
- 🚀 Deployment
- 
- This process is iterative, allowing for continuous improvement.
- 
- 🏆 Model Selection
- Split data into training, validation, and test sets. Train different models, validate them, select the best performing one, and then test it on the test set to ensure generalization.
+## Module 3: Machine Learning for Classification
+Create a customer churn prediction system using logistic regression and learn about feature selection.
 
-💻 Setting Up the Environment
-Install necessary tools like Python, Numpy, Pandas, Matplotlib, Scikit-learn. Anaconda is the easiest option. Eventually create an AWS account for cloud resources.
+Topics:
+Logistic regression
+Feature importance and selection
+Categorical variable encoding
+Model interpretation
 
 
-🔢 Introduction to Numpy
-Numpy is crucial for manipulating numerical data, providing efficient operations on arrays and matrices.
+## Module 4: Evaluation Metrics for Classification
+Learn how to properly evaluate classification models and handle imbalanced datasets.
+
+Topics:
+
+Accuracy, precision, recall, F1-score
+ROC curves and AUC
+Cross-validation
+Confusion matrices
+Class imbalance handling
 
 
-🔗 Linear Algebra
-Covering all types of multiplication with vectors and matrices, including the creation of identity matrices using functions like np.eye().
+## Module 5: Deploying Machine Learning Models
+Turn your models into web services and deploy them with Docker and cloud platforms.
+
+Topics:
+
+Model serialization with Pickle
+FastAPI web services
+Docker containerization
+Cloud deployment
 
 
-📊 Introduction to Pandas
-Pandas is a Python library used for processing and analyzing tabular data efficiently.
+## Module 6: Decision Trees & Ensemble Learning
+Learn tree-based models and ensemble methods for better predictions.
 
-	
+Topics:
 
-## Homework
+Decision trees
+Random Forest
+Gradient boosting (XGBoost)
+Hyperparameter tuning
+Feature importance
+Midterm Project
+Apply everything you've learned in a complete project: find a dataset, train models, and deploy a web service.
 
-Homework is created fresh each cohort and is for practice only — it doesn't affect your certificate.
-Assignments are in cohorts/2025/{module}. Once ready, we share the submission form in Slack.
-Submit by publishing your solution to a public GitHub repo and adding the link in the form.
-Deadlines are strict: once they pass, the form closes. See schedule.
-Submissions appear on the leaderboard.
+## Module 7: Neural Networks & Deep Learning
+Introduction to neural networks using TensorFlow and Keras, including CNNs and transfer learning.
 
-This is optional but fun — you can also earn points for learning-in-public posts with #mlzoomcamp.
+Topics:
+
+Neural network fundamentals
+PyTorch
+TensorFlow & Keras
+Convolutional Neural Networks
+Transfer learning
+Model optimization
+
+## Module 8: Serverless Deep Learning
+Deploy deep learning models using serverless technologies like AWS Lambda.
+
+Topics:
+
+Serverless concepts
+Deploying Scikit-Learn models with AWS Lambda
+Deploying TensorFlow and PyTorch models with AWS Lambda
+API Gateway
+
+## Module 9: Kubernetes & TensorFlow Serving
+Learn to serve ML models at scale using Kubernetes and TensorFlow Serving.
+
+Topics:
+
+Kubernetes basics
+TensorFlow Serving
+Model deployment and scaling
+Load balancing
+
+
+# Capstone Project
+Choose a problem that interests you, find a suitable dataset, and develop your model. Deploy your model into a web service (local deployment or cloud deployment for bonus points).
+
+Thanks for these awesome projects! 
+
+https://github.com/DataTalksClub  
+
+Learn more: Learning in Public 
