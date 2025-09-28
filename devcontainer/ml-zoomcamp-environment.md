@@ -160,7 +160,7 @@ List your packages in `requirements.txt`. Example:
 ```
 
 ## DevContainer file
-# create a json file with the next configuration and make sure you have __ms-vscode-remote.remote-containers__ extension installed in VS Code.
+#### create a json file with the next configuration and make sure you have __ms-vscode-remote.remote-containers__ extension installed in VS Code.
 
 ``` 
 {
@@ -219,4 +219,5 @@ Happy modeling! 🧬
 ```
 
 ---
+
 
