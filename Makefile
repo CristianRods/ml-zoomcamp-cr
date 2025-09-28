@@ -7,6 +7,11 @@ PORT = 8888
 ENV_FILE = .env
 NOTEBOOK_DIR = $(PWD)/notebooks
 
+
+## ─────────────────────────────────────────────
+## 🐳 Docker (manual control)
+## ─────────────────────────────────────────────
+
 ## 🐳 Build the Docker image (only if not already built)
 build:
 	@if [ -z "$$(docker images -q $(IMAGE_NAME))" ]; then \
@@ -47,6 +52,42 @@ notebook:
 		$(IMAGE_NAME) \
 		jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root --NotebookApp.token=''
 
+## ─────────────────────────────────────────────
+## 🧩 Docker Compose (stack orchestration)
+## ─────────────────────────────────────────────
+
+# Start Docker with build
+compose-up:
+	docker-compose up --build
+# Stop Docker
+compose-down:
+	docker-compose down
+
+# View logs
+compose-logs:
+	docker-compose logs -f notebook
+
+# Restart services
+compose-restart:
+	docker-compose restart
+
+# Access shell in running container
+compose-shell:
+	docker-compose exec notebook bash
+
+# Compose Docker for development (no build)
+compose-dev:
+	docker-compose up
+
+# Stop Compose Docker
+compose-stop:
+	docker-compose down
+
+
+## ─────────────────────────────────────────────
+## 🧹 Maintenance
+## ────────────────────────────────────────
+
 ## Push changes to GitHub
 push:
 	git add .
@@ -62,3 +103,5 @@ clean-all:
 	docker container prune -f
 	docker volume prune -f
 	docker rmi $(IMAGE_NAME) || true
+
+
