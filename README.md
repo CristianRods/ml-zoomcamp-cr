@@ -21,12 +21,19 @@ In supervised learning, models learn from labeled data (with known outcomes) to 
 A structured methodology for organizing ML projects, consisting of the following steps:
 
  💼 Business Understanding
+ 
  🔎 Data Understanding
+ 
  🧹 Data Preparation
+ 
  🤖 Modeling (choosing and training models, then selecting the best one)
+ 
  📊 Evaluation
+ 
  🚀 Deployment
+ 
  This process is iterative, allowing for continuous improvement.
+ 
  🏆 Model Selection
  Split data into training, validation, and test sets. Train different models, validate them, select the best performing one, and then test it on the test set to ensure generalization.
 
