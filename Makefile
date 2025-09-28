@@ -88,10 +88,14 @@ compose-stop:
 ## 🧹 Maintenance
 ## ────────────────────────────────────────
 
-## Push changes to GitHub
+## Push changes to GitHub with a custom commit message
 push:
+	@if [ -z "$(msg)" ]; then \
+		echo "❌ Please provide a commit message using 'make push msg=\"your message\"'"; \
+		exit 1; \
+	fi
 	git add .
-	git commit -m "Update ML course setup"
+	git commit -m "$(msg)"
 	git push
 
 ## Clean Docker image
