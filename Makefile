@@ -52,6 +52,10 @@ notebook:
 		$(IMAGE_NAME) \
 		jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root --NotebookApp.token=''
 
+## Stop container if running
+stop:
+	docker stop $(CONTAINER_NAME) || true
+
 ## ─────────────────────────────────────────────
 ## 🧩 Docker Compose (stack orchestration)
 ## ─────────────────────────────────────────────
