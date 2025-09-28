@@ -1,0 +1,20 @@
+# Core ML libraries
+numpy
+pandas
+scikit-learn
+matplotlib
+seaborn
+
+# Jupyter
+jupyter
+
+# MLflow SDK
+mlflow
+
+# PostgreSQL driver
+psycopg2-binary
+
+# Optional: experiment tracking, model serving
+xgboost
+lightgbm
+torch
