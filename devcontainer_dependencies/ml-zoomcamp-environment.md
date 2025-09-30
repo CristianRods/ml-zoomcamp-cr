@@ -21,6 +21,7 @@ WORKDIR /app
 ENV DEBIAN_FRONTEND=noninteractive
 
 # Install system dependencies
+
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     git \
@@ -38,7 +39,7 @@ EXPOSE 8888
 CMD ["bash"]
 ```
 
-```markdown
+
 # 🧠 ML Course Environment (Docker + WSL)
 
 This repository contains a reproducible Docker-based setup for running machine learning scripts and notebooks inside WSL.
@@ -53,6 +54,7 @@ This repository contains a reproducible Docker-based setup for running machine l
 ## 📁 Project Structure
 
 ```
+
 ml-course/
 ├── data/               # datasets
 ├── notebooks/          # Jupyter notebooks
@@ -64,9 +66,8 @@ ml-course/
 ├── Makefile            # automation commands
 ├── mlruns	            # save all runs from machine learning
 └── README.md           # project overview
+
 ```
-```
-´´´ 
 
 ## 🐳 Docker Setup
 ### Use docker in two ways: 
@@ -78,13 +79,14 @@ ml-course/
 
 PROVIDE THE VARIABLES: 
 
-
+``` 
 IMAGE_NAME = <image_name>
 CONTAINER_NAME = <name-container>
 DEBUG_CONTAINER = $(CONTAINER_NAME)-debug-$(shell date +%s)
 PORT = 8888
 ENV_FILE = .env
 NOTEBOOK_DIR = $(PWD)/notebooks
+```
 
 ENSURE YOU HAVE A .env file and follow the structure of the folder system.
 
@@ -157,17 +159,29 @@ torch
 - This setup assumes Docker and WSL2 are already installed.
 - All code runs inside the container; your local environment stays clean.
 - You can mount datasets or notebooks via the `/app` volume.
-- Make sure you have installed docker-compose in WSL
-
+- Make sure you have installed docker-compose in WSL: 
 ```  
 sudo apt update && sudo apt install docker-compose
+```
+- To work with simple notebooks in Jupyter or Jupyter Lab run your notebook in the docker.
+If you have not build your image:
 
-´´´
----
-
-Happy modeling! 🧬
+```
+make build (if you have not build your image yet) 
+```
+Run your notebook inside the docker
+```
+make notebook 
 ```
 
+If you want to edit your code scripts or Notebooks inside VS Code then compose the entire docker system.
+```
+make compose-up
+```
 ---
+Happy modeling! 🧬
+
+
+
 
 
