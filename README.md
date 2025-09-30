@@ -15,6 +15,8 @@ CRISP-DM methodology
 Model selection concepts
 Environment setup
 
+Check the environment setup using Docker - Devcontianer_dependencies folder.
+
 ## Module 2: Machine Learning for Regression
 Build a car price prediction model while learning linear regression, feature engineering, and regularization.
 Topics:
