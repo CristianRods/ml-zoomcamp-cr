@@ -1,4 +1,6 @@
 SIGN UP TO THE COURSE HERE: https://airtable.com/shryxwLd0COOEaqXo
+
+
 GIVE A START TO THESE REPOS: https://github.com/DataTalksClub   
 
 ALL CONTENTS IN THIS REPO COVERS 2025 Cohort. 
