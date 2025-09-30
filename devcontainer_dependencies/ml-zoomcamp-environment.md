@@ -151,7 +151,7 @@ torch
   ],
   "postCreateCommand": "pip install -r requirements.txt"
 }
-
+```
 
 
 ## 🧪 Notes
@@ -160,26 +160,33 @@ torch
 - All code runs inside the container; your local environment stays clean.
 - You can mount datasets or notebooks via the `/app` volume.
 - Make sure you have installed docker-compose in WSL: 
+
 ```  
 sudo apt update && sudo apt install docker-compose
 ```
+
 - To work with simple notebooks in Jupyter or Jupyter Lab run your notebook in the docker.
 If you have not build your image:
 
 ```
 make build (if you have not build your image yet) 
 ```
+
 Run your notebook inside the docker
+
 ```
 make notebook 
 ```
 
 If you want to edit your code scripts or Notebooks inside VS Code then compose the entire docker system.
+
 ```
 make compose-up
 ```
----
+
+
 Happy modeling! 🧬
+
 
 
 
