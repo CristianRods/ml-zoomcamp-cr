@@ -1,5 +1,7 @@
 ## Homework
 
+## CHECK HERE THE NB WITH THE SOLUTIONS: notebooks/HW_01.ipynb
+
 ### Set up the environment
 
 You need to install Python, NumPy, Pandas, Matplotlib and Seaborn. For that, you can use the instructions from
