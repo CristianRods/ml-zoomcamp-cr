@@ -6,7 +6,8 @@ GIVE A START TO THESE REPOS: https://github.com/DataTalksClub
 ALL CONTENTS IN THIS REPO COVERS 2025 Cohort. 
 
 ## Syllabus
-Module 1: Introduction to Machine Learning
+
+## Module 1: Introduction to Machine Learning
 Learn the fundamentals: what ML is, when to use it, and how to approach ML problems using the CRISP-DM framework.
 
 ## Topics:
